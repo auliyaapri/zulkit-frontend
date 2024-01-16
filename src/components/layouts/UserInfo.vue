@@ -1,13 +1,43 @@
-
+<script setup>
+const props = defineProps({
+    user:Object
+    
+});
+</script>
 <template>
     <div class="md:order-2">
-        <RouterLink to="/login"
-            class="px-8 py-3 mt-2 mr-2 text-base font-medium text-black bg-gray-200 border border-transparent rounded-full hover:bg-gray-300 md:py-2 md:text-sm md:px-8 hover:shadow">
-            Sign In
-        </RouterLink>
-        <RouterLink to="/register"
-            class="px-8 py-3 text-base font-medium text-white border border-transparent rounded-full bg-navy hover:bg-navy md:py-2 md:text-sm md:px-8 hover:shadow">
-            Sign Up
-        </RouterLink>
+        <div class="flex items-center">
+            <div class="mr-1" style="display:flex; align-items: center;">
+                <span>Halo, {{ user.name }}</span>
+            </div>
+            <button type="button"
+                class="flex mx-1 text-sm bg-gray-800 rounded-full md:m-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                id="user-menu-button"
+                aria-expanded="false"
+                data-dropdown-toggle="dropdown">
+                <span class="sr-only">Open user menu</span>
+                <img
+                    class="w-8 h-8 rounded-full"
+                    :src="user.profile_photo_url"
+                    alt="user photo"/>
+            </button>
+        </div>
+        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
+            <div class="py-1">
+                <span class="block px-4 py-3">
+                    <span class="block text-sm text-gray900 dark:text-white">{{ user.name }}</span>
+                    <span class="text-xs font-semibold tracking-wide uppercase regular dark:text-gray600">@{{ user.email }}</span>
+                </span>
+            </div>
+            <ul class="py1" aria-labelledby="dropdown">
+                <li>
+                    <a href="#" class="block px4 py2 text-sm textgray700 hover:bggray100 dark:hover:bggray600 dark:textgray200 dark:hover:textwhite">Subscriptions</a>
+                </li>
+                <!-- Tambahkan lebih banyak opsi di sini -->
+            </ul>
+        </div>
     </div>
 </template>
+
+
+
