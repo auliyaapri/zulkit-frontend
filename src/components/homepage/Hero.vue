@@ -6,7 +6,7 @@
                 <main class="mx-auto mt-10 max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-36">
                     <div class="sm:text-center lg:text-left">
                         <h1 class="text-3xl font-bold leading-normal tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
-                            <span class="block lg:mb-2">Design Better &</span>
+                            <span class="block lg:mb-2">Design Better Baru Update&</span>
                             <span class="block">Faster Than Before.</span>
                         </h1>
                         <p
