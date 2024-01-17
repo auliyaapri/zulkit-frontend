@@ -26,8 +26,7 @@ async function register() {
       }
     );
     localStorage.setItem("access_token", response.data.data.access_token);
-    localStorage.setItem("token_type", response.data.data.token_type);
-    localStorage.setItem("ss", 'sasas');
+    localStorage.setItem("token_type", response.data.data.token_type);    
 
     userStore.fetchUser();
     router.push('/');

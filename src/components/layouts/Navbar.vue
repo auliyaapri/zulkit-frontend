@@ -1,12 +1,11 @@
 <script setup>
+import { onMounted, computed } from 'vue';
+import { useUserStore } from "@/stores/user";
+
 import Logo from './Logo.vue';
 import NavigationLinks from "./NavigationLinks.vue";
-
 import UserInfo from "./UserInfo.vue";
-
-import { onMounted, computed } from 'vue';
 import AuthButtonVue from "./AuthButton.vue";
-import { useUserStore } from "@/stores/user";
 
 // Dapatkan instance dari toko "User"
 const userStore = useUserStore();
